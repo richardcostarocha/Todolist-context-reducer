@@ -20,6 +20,7 @@ import { ListContext } from "../contexts/listContext";
       placeholder="Digite uma tarefa"
       value={addTarefa}
       onChange={e => setAddTarefa(e.target.value)}
+      onKeyDown={e => { if (e.key === 'Enter') handleClick(); }}
       className="flex-1 rounded-md pl-4 text-black"
        />
       <button className="mx-4 bg-blue-600 border-gray-800 border rounded p-3" onClick={handleClick}>ADICIONAR</button>
